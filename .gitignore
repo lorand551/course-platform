@@ -1,0 +1,26 @@
+# =====================
+# 🌐 GENERAL WEB PROJECT
+# =====================
+
+# macOS hidden files
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Logs
+*.log
+
+# Editor folders
+.vscode/
+.idea/
+
+# Optional: system-wide trash/temp files
+*.bak
+*.tmp
+
+# If you ever use node/npm later
+node_modules/
+
+# If you use dotenv for private keys
+.env
