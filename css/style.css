@@ -3,10 +3,19 @@ body {
 }
 
 .navbar {
-  width: 100%;
+  width: 100vw;
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem;
+  padding-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cta-button a {
+  text-decoration: none;
+  color: white;
 }
 
 /* Frame 1116606963 */
@@ -30,6 +39,8 @@ body {
 
 .nav-menu ul {
   display: flex;
+  text-decoration: none;
+  list-style: none;
   flex-direction: row;
   align-items: center;
   padding: 0px;
@@ -43,12 +54,13 @@ body {
 
 /* Frame 1116606970 */
 
-.nav-register {
+.cta-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 32px;
+  /* padding: 16px 32px; */
+  text-decoration: none;
   gap: 10px;
   width: 173px;
   height: 56px;

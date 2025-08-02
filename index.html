@@ -15,30 +15,8 @@
 
   <!-- navbar -->
 
-  <header id="header-section">
-    <nav class="navbar">
-      <div class="nav-group-menu">
-        <div class="logo-group">
-          <div class="logo-svg">
-            <img src="./vector-assets/vector-header-logo.svg" alt="svg-logo">
-            <div id="logo-text">Sparkly</div>
-          </div>
-        </div>
-        <div class="nav-menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Mentors</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-        <div class="nav-register cta-button" id="nav-register">
-          <a href="#">Register now</a>
-        </div>
-      </div>
-    </nav>
+  <header class="header-section">
+    <div id="header-placeholder"></div>
   </header>
 
   <!-- navbar ends  -->
@@ -50,6 +28,8 @@
         <div class="hero-heading-title">
           <h1>enhance your knowledge and achieve your goals</h1>
         </div>
+        <!-- this part is neccesary to make it dynamic and use it in other pages just like with the header and footer,same concept.
+        --its neccesary to import and fetch it until you see marks !!!!-->
         <div class="hero-heading-reviews">
           <div class="hero-heading-reviews-avatars">
             <div class="avatar" id="first-avatar"><img src="./images/hero-heading-reviews-avatars/ellipse59.png" alt="">
@@ -72,6 +52,8 @@
             </div>
           </div>
         </div>
+        <!-- !!!! -->
+        <!-- ^until here is needed to import -->
         <div class="hero-heading-cta-button cta-button" id="hero-heading-cta-button">
           <a href="#">explore courses</a>
         </div>
@@ -161,14 +143,14 @@
     <section class="become-mentor" id="become-mentor" data-becomeMentor="become-mentor">
       <div class="become-mentor-container">
         <div class="mentor-join-text">
-          <div id="mentor-badge">
-            <span class="mentor-badge">Become a mentor</span>
+          <div id="mentor-badge top-badge">
+            <span class="mentor-badge top-badge">Become a mentor</span>
           </div>
           <div id="mentor-title">
             <h2 id="mentor-title">Join Our Team - <br>Inspire Learners Today!</h2>
           </div>
           <div id="become-mentor-paragraph">
-            <p id="become-mentor-paragraph">Become a part of our passionate educator community and share your expertise
+            <p>Become a part of our passionate educator community and share your expertise
               with learners worldwide. As an instructor, you’ll create engaging courses, guide students, and help shape
               their personal and professional success</p>
           </div>
@@ -182,9 +164,116 @@
       </div>
     </section>
 
+    <!-- become a mentor end -->
+
+    <!-- free 30 days trial -->
+
+    <div class="course-purchase-container">
+      <!-- image section -->
+      <aside class="purchase-image">
+        <div class="course-purchase-aside-container">
+          <img src="./images/hero-course-purchase-section/aside-image.jpg" alt="students course">
+        </div>
+      </aside>
+      <!-- checkout form -->
+      <section class="checkout-form">
+        <div class="checkout-badge top-badge" id="checkout-badge">
+          <span">Begin your journey</span>
+        </div>
+        <div class="checkout-header">
+          <h2>Start your 30 day free trial</h2>
+          <p>Experience full access to premium features with no commitment!</p>
+        </div>
+        <!-- the checkout form * will have to not forget about implementing it -->
+        <form action="#" id="checkout-form">
+          <label for="card">Enter card number</label>
+          <input type="text" id="card" placeholder="1254 1234 1234 1234">
+
+          <div class="checkout-form-two-columns">
+            <!-- here must have only numbers for date and CVC, will add this with js -->
+            <!-- i did 2 divs with label and input for the exp date and security CVC, we ll have to see how it 
+              will work later with customization in CSS-->
+            <div class="expiration-date">
+              <label for="expiration-date">Expiration date</label>
+              <input type="text" placeholder="MM/YY">
+            </div>
+            <div class="security-code">
+              <label for="security-code">Security code</label>
+              <input type="text" placeholder="CVC">
+            </div>
+          </div>
+
+          <label for="country">Country</label>
+          <select name="" id="country">
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="afghanistan">Afghanistan</option>
+            <option value="albania">Albania</option>
+            <option value="algeria">Algeria</option>
+            <option value="andorra">Andorra</option>
+            <option value="angola">Angola</option>
+            <option value="argentina">Argentina</option>
+            <option value="armenia">Armenia</option>
+            <option value="australia">Australia</option>
+            <option value="austria">Austria</option>
+            <option value="azerbaijan">Azerbaijan</option>
+            <option value="bahamas">Bahamas</option>
+            <option value="bahrain">Bahrain</option>
+            <option value="bangladesh">Bangladesh</option>
+            <option value="barbados">Barbados</option>
+            <option value="belarus">Belarus</option>
+            <option value="belgium">Belgium</option>
+            <option value="belize">Belize</option>
+            <option value="benin">Benin</option>
+            <option value="bhutan">Bhutan</option>
+            <option value="bolivia">Bolivia</option>
+            <option value="bosnia-herzegovina">Bosnia and Herzegovina</option>
+            <option value="botswana">Botswana</option>
+            <option value="brazil">Brazil</option>
+            <option value="brunei">Brunei</option>
+            <option value="bulgaria">Bulgaria</option>
+            <option value="burkina-faso">Burkina Faso</option>
+            <option value="burundi">Burundi</option>
+            <option value="cambodia">Cambodia</option>
+            <option value="cameroon">Cameroon</option>
+            <option value="canada">Canada</option>
+            <option value="cape-verde">Cape Verde</option>
+            <option value="central-african-republic">Central African Republic</option>
+            <option value="chad">Chad</option>
+            <option value="chile">Chile</option>
+            <option value="china">China</option>
+            <option value="colombia">Colombia</option>
+            <option value="comoros">Comoros</option>
+            <option value="congo">Congo</option>
+            <option value="costa-rica">Costa Rica</option>
+            <option value="croatia">Croatia</option>
+            <option value="cuba">Cuba</option>
+            <option value="cyprus">Cyprus</option>
+            <option value="czech-republic">Czech Republic</option>
+            <option value="denmark">Denmark</option>
+            <option value="djibouti">Djibouti</option>
+            <option value="dominica">Dominica</option>
+            <option value="dominican-republic">Dominican Republic</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="egypt">Egypt</option>
+            <option value="el-salvador">El Salvador</option>
+          </select>
+
+          <div class="form-gift-code">
+            <label for="form-gift-code">Gift card or coupon code</label>
+            <input type="text" placeholder="Promo code">
+            <button type="button" class="cta-button">Apply</button>
+          </div>
+
+          <button type="submit" class="cta-button">Get started now</button>
+        </form>
+      </section>
+    </div>
+
   </main>
 
-  <script src="../js/app.js"></script>
+  <script src="./js/layOut.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
