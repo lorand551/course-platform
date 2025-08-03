@@ -1,4 +1,8 @@
 body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2rem;
+  background: #f8f9fa;
   font-family: 'Satoshi', sans-serif;
 }
 
@@ -6,7 +10,7 @@ body {
   width: 100vw;
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 2rem;
+  padding: 1rem;
 }
 
 a {

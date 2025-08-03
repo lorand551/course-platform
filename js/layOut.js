@@ -1,34 +1,41 @@
-async function loadLayout() {
-	// checking project-root folder
-	const basePath = window.location.pathname.includes("/project-root/")
-		? "../"
-		: "./";
+function getBasePath() {
+	// Dacă URL-ul conține "project-root", mergem un nivel mai sus
+	return window.location.pathname.includes("project-root/") ? "../" : "./";
+}
 
-	// loading header
+async function loadLayout() {
+	const basePath = getBasePath();
+
+	// Header
 	const headerHTML = await fetch(`${basePath}header.html`).then((res) =>
 		res.text()
 	);
 	document.getElementById("header-placeholder").innerHTML = headerHTML;
-	// loading footer
-	const footerHTML = await fetch(`${basePath}footer.html`).then((res) =>
-		res.text()
-	);
-	document.getElementById("footer-placeholder").innerHTML = footerHTML;
 
-	// set link activ
+	// Footer
+	const footerPlaceholder = document.getElementById("footer-placeholder");
+	if (footerPlaceholder) {
+		const footerHTML = await fetch(`${basePath}footer.html`).then((res) =>
+			res.text()
+		);
+		footerPlaceholder.innerHTML = footerHTML;
+	}
+
 	setActiveMenuItem();
 }
 
-function setActiveMenuItem() {
-	const currentPage = window.location.pathname.split("/").pop() || "index.html";
-	const menuLinks = document.querySelectorAll("header nav a");
-
-	menuLinks.forEach((link) => {
-		const href = link.getAttribute("href");
-		if (href.includes(currentPage)) {
-			link.classList.add("active");
-		}
-	});
+async function loadReviews() {
+	const basePath = getBasePath();
+	const reviewsElement = document.getElementById("reviews-placeholder");
+	if (reviewsElement) {
+		const reviewsHTML = await fetch(`${basePath}reviews.html`).then((res) =>
+			res.text()
+		);
+		reviewsElement.innerHTML = reviewsHTML;
+	}
 }
 
-window.addEventListener("DOMContentLoaded", loadLayout);
+window.addEventListener("DOMContentLoaded", () => {
+	loadLayout();
+	loadReviews();
+});
